@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphic Design Portfolio | Naushil Rana</title>
+    <title>Graphic Design Portfolio | Jay Shah</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
 
@@ -37,7 +37,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease; }
         body { background-color: var(--bg-main); color: var(--text-main); overflow-x: hidden; }
 
-        /* Logo Animation */
         .logo-animate {
             font-weight: 800;
             background: linear-gradient(90deg, var(--text-main), var(--accent), var(--text-main));
@@ -46,11 +45,7 @@
             -webkit-text-fill-color: transparent;
             animation: shineEffect 4s linear infinite;
         }
-        .dot-blink { 
-            color: var(--accent); 
-            display: inline-block; 
-            animation: dotBreathing 2s ease-in-out infinite; 
-        }
+        .dot-blink { color: var(--accent); display: inline-block; animation: dotBreathing 2s ease-in-out infinite; }
 
         @keyframes shineEffect { to { background-position: 200% center; } }
         @keyframes dotBreathing { 0%, 100% { opacity: 1; transform: scale(1); text-shadow: 0 0 10px var(--accent); } 50% { opacity: 0.3; transform: scale(0.8); } }
@@ -64,7 +59,7 @@
         nav ul li a:hover { color: var(--accent); }
         .theme-switch { background: var(--bg-tertiary); border: 1px solid var(--border-color); color: var(--text-main); width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 
-        /* Header Section */
+        /* Header */
         .header-section { padding: 140px 8% 40px; text-align: center; background: radial-gradient(circle at center, var(--bg-tertiary) 0%, var(--bg-main) 100%); }
         .header-section h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; }
         .header-section h1 span { color: var(--accent); }
@@ -72,26 +67,18 @@
         .back-btn { display: inline-block; padding: 10px 20px; color: var(--accent); border: 1px solid var(--accent); border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.3s; }
         .back-btn:hover { background: var(--accent); color: var(--btn-text); }
 
-        /* Grid UI */
+        /* Portfolio Grid */
         section { padding: 40px 8% 80px; }
         .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         
-        .project-card { 
-            background: var(--bg-secondary); 
-            border-radius: 15px; 
-            overflow: hidden; 
-            border: 1px solid var(--border-color); 
-            color: var(--text-main); 
-            transition: 0.4s; 
-            cursor: pointer;
-        }
+        .project-card { background: var(--bg-secondary); border-radius: 15px; overflow: hidden; border: 1px solid var(--border-color); color: var(--text-main); transition: 0.4s; cursor: pointer; }
         .project-card:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: 0 10px 30px var(--shadow); }
         .project-card img { width: 100%; height: 260px; object-fit: cover; }
         .project-info { padding: 20px; }
         .project-info h3 { font-size: 1.25rem; margin-bottom: 8px; }
         .project-info p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; }
 
-        /* Image Modal (Full View) */
+        /* Modal */
         .image-modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(5, 5, 5, 0.95); backdrop-filter: blur(10px); opacity: 0; transition: opacity 0.3s ease; }
         .modal-content-container { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative; }
         .modal-content-img { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 8px; }
@@ -99,7 +86,6 @@
 
         footer { padding: 40px 8%; text-align: center; border-top: 1px solid var(--border-color); background: var(--bg-tertiary); color: var(--text-muted); font-size: 0.9rem; }
 
-        /* Mobile Styles */
         @media (max-width: 768px) {
             nav { padding: 15px 5%; }
             .header-section { padding: 110px 5% 30px; }
@@ -114,7 +100,7 @@
     <!-- Navbar -->
     <nav>
         <a href="index.html" class="nav-logo">
-            <span class="logo-animate">Naushil</span><span class="dot-blink">.</span>
+            <span class="logo-animate">Jay</span><span class="dot-blink">.</span>
         </a>
         <div class="nav-links-container">
             <ul>
@@ -129,15 +115,13 @@
     <!-- Header -->
     <div class="header-section">
         <h1>🎨 Graphic <span>Design</span></h1>
-        <p>A collection of posters, social media banners, brand identity, and creative artwork.</p>
+        <p>A collection of posters, social media banners, brand identity, and creative artwork by Jay Shah.</p>
         <a href="index.html" class="back-btn">← Back to Main Portfolio</a>
     </div>
 
-    <!-- Graphic Work Grid -->
+    <!-- Work Grid -->
     <section>
         <div class="portfolio-grid">
-
-            <!-- Card 1 -->
             <div class="project-card" onclick="openModal('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200')">
                 <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop" alt="Brand Design">
                 <div class="project-info">
@@ -146,37 +130,25 @@
                 </div>
             </div>
 
-            <!-- Card 2 -->
             <div class="project-card" onclick="openModal('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200')">
                 <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800" alt="Typography Design">
                 <div class="project-info">
                     <h3>Typography Poster</h3>
-                    <p>Creative typography composition for social media promotional ads.</p>
+                    <p>Creative typography composition for social media ads.</p>
                 </div>
             </div>
 
-            <!-- Card 3 -->
             <div class="project-card" onclick="openModal('https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=1200')">
                 <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800" alt="Event Flyer">
                 <div class="project-info">
                     <h3>Event & Music Poster</h3>
-                    <p>Minimalist poster design tailored for live events and concerts.</p>
+                    <p>Minimalist poster design tailored for live events.</p>
                 </div>
             </div>
-
-            <!-- Card 4 -->
-            <div class="project-card" onclick="openModal('https://images.unsplash.com/photo-1626785774573-4b799315345d?w=1200')">
-                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800" alt="Product Ads">
-                <div class="project-info">
-                    <h3>Product Advertisement</h3>
-                    <p>Sleek and eye-catching graphic layout for e-commerce branding.</p>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- Modal Lightbox for Image Zoom -->
+    <!-- Modal Lightbox -->
     <div class="image-modal" id="imageModal">
         <div class="close-btn" onclick="closeModal()">&times;</div>
         <div class="modal-content-container">
@@ -186,19 +158,17 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Naushil Rana. All Rights Reserved.</p>
+        <p>© 2026 Jay Shah. All Rights Reserved.</p>
     </footer>
 
     <!-- JavaScript -->
     <script>
-        // Dark / Light Theme Toggle
         const themeToggle = document.getElementById('themeToggle');
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('light-mode');
             themeToggle.textContent = document.body.classList.contains('light-mode') ? '🌙' : '☀️';
         });
 
-        // Image Viewer Modal
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImg');
 
@@ -213,7 +183,6 @@
             setTimeout(() => modal.style.display = 'none', 300);
         }
 
-        // Close modal when pressing ESC
         window.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeModal();
         });
