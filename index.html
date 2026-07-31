@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naushil Rana | Creative Portfolio</title>
+    <title>Jay Shah | Creative Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
@@ -34,11 +34,10 @@
             --btn-text: #ffffff;
         }
 
-        /* --- RESET & GENERAL --- */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
         body { background-color: var(--bg-main); color: var(--text-main); overflow-x: hidden; }
 
-        /* --- LOGO ANIMATION --- */
+        /* Logo Animation */
         .logo-animate {
             font-weight: 800;
             background: linear-gradient(90deg, var(--text-main), var(--accent), var(--text-main));
@@ -56,7 +55,7 @@
         @keyframes shineEffect { to { background-position: 200% center; } }
         @keyframes dotBreathing { 0%, 100% { opacity: 1; transform: scale(1); text-shadow: 0 0 10px var(--accent); } 50% { opacity: 0.3; transform: scale(0.8); } }
 
-        /* --- NAVIGATION --- */
+        /* Navbar */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: var(--nav-bg); position: fixed; width: 100%; top: 0; z-index: 1000; backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); }
         .nav-logo { font-size: 26px; text-decoration: none; display: flex; align-items: center; }
         .nav-links-container { display: flex; align-items: center; gap: 30px; }
@@ -65,7 +64,7 @@
         nav ul li a:hover { color: var(--accent); }
         .theme-switch { background: var(--bg-tertiary); border: 1px solid var(--border-color); color: var(--text-main); width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; }
 
-        /* --- HERO SECTION --- */
+        /* Hero */
         .hero { min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 120px 8% 50px; background: radial-gradient(circle at center, var(--bg-tertiary) 0%, var(--bg-main) 100%); }
         .hero-content { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 1100px; gap: 50px; }
         .hero-text { flex: 1; text-align: left; }
@@ -81,23 +80,23 @@
         .btn:hover { background: transparent; color: var(--accent); transform: translateY(-3px); }
         .btn-outline { background: transparent; color: var(--accent); }
 
-        /* --- SECTION COMMONS --- */
+        /* Sections */
         section { padding: 100px 8%; }
         .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 60px; color: var(--text-main); font-weight: 800; }
         .section-title span { color: var(--accent); }
 
-        /* --- PORTFOLIO CATEGORIES --- */
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        /* Single Graphic Card Container */
+        .single-card-wrapper { max-width: 500px; margin: 0 auto; }
         .card-link { text-decoration: none; color: inherit; display: block; }
         
-        .project-card { background: var(--bg-secondary); border-radius: 16px; overflow: hidden; border: 1px solid var(--border-color); transition: 0.4s; height: 100%; display: flex; flex-direction: column; }
+        .project-card { background: var(--bg-secondary); border-radius: 16px; overflow: hidden; border: 1px solid var(--border-color); transition: 0.4s; display: flex; flex-direction: column; }
         .project-card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 10px 30px var(--shadow); }
-        .project-card img { width: 100%; height: 220px; object-fit: cover; }
-        .project-info { padding: 25px; flex: 1; display: flex; flex-direction: column; }
-        .project-info h3 { font-size: 1.3rem; margin-bottom: 10px; }
-        .project-info p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
+        .project-card img { width: 100%; height: 280px; object-fit: cover; }
+        .project-info { padding: 25px; text-align: center; }
+        .project-info h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .project-info p { font-size: 1rem; color: var(--text-muted); line-height: 1.6; }
 
-        /* --- CONTACT SECTION --- */
+        /* Contact */
         .premium-contact-container { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: center; max-width: 1100px; margin: 0 auto; }
         .contact-left-text h3 { font-size: 2.5rem; margin-bottom: 10px; }
         .contact-left-text p { color: var(--text-muted); font-size: 1rem; margin-bottom: 25px; line-height: 1.6; }
@@ -116,34 +115,23 @@
         .submit-btn-premium { width: 100%; padding: 16px; background: var(--accent); color: #000; border: none; border-radius: 10px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: 0.3s; margin-top: 5px; }
         .submit-btn-premium:hover { background: #00e6b8; transform: translateY(-2px); }
 
-        /* --- MODAL LIGHTBOX --- */
+        /* Modal */
         .image-modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(5, 5, 5, 0.95); backdrop-filter: blur(10px); opacity: 0; transition: opacity 0.3s ease; }
         .modal-content-container { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative; }
         .modal-content-img { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 8px; }
         .close-btn { position: absolute; top: 30px; right: 40px; color: #fff; background: rgba(20, 20, 20, 0.8); border-radius: 50%; width: 45px; height: 45px; font-size: 24px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
 
-        /* --- FOOTER --- */
         footer { padding: 40px 8%; text-align: center; border-top: 1px solid var(--border-color); background: var(--bg-tertiary); color: var(--text-muted); font-size: 0.9rem; }
 
-        /* --- MOBILE RESPONSIVE --- */
         @media (max-width: 768px) {
             nav { padding: 15px 5%; }
-            nav ul { gap: 15px; }
-            nav ul li a { font-size: 13px; }
-            
             .hero { padding: 100px 5% 40px; }
             .hero-content { flex-direction: column-reverse; text-align: center; gap: 25px; }
-            .hero-text { text-align: center; }
             .hero-text h2 { font-size: 2.5rem; }
             .hero-image img { width: 180px; height: 180px; }
             .hero-buttons { justify-content: center; }
-
             section { padding: 60px 5%; }
-            .section-title { font-size: 2rem; margin-bottom: 30px; }
-            .portfolio-grid { grid-template-columns: 1fr; }
-
             .premium-contact-container { grid-template-columns: 1fr; gap: 35px; }
-            .premium-form { padding: 25px 20px; }
         }
     </style>
 </head>
@@ -152,7 +140,7 @@
     <!-- NAVBAR -->
     <nav>
         <a href="#home" class="nav-logo">
-            <span class="logo-animate">Naushil</span><span class="dot-blink">.</span>
+            <span class="logo-animate">Jay</span><span class="dot-blink">.</span>
         </a>
         <div class="nav-links-container">
             <ul>
@@ -169,53 +157,31 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h3>Hello, I'm</h3>
-                <h2>Naushil Rana</h2>
-                <p class="bio">I am a passionate Graphic Designer, Video Editor, and AI Prompt Engineer. I specialize in transforming raw ideas into visually stunning realities.</p>
+                <h2>Jay Shah</h2>
+                <p class="bio">I am a passionate Creative Professional & Graphic Designer. I specialize in transforming raw ideas into visually stunning realities.</p>
                 <div class="hero-buttons">
                     <a href="#portfolio" class="btn">View My Work</a>
                     <a href="#contact" class="btn btn-outline">Hire Me</a>
                 </div>
             </div>
-            <div class="hero-image" onclick="openModal('https://raw.githubusercontent.com/naushilrana6/portfolio-images/d5b7b272bf87aceb10d94356e008a0d4474d735d/profile.jpeg')">
-                <img src="https://raw.githubusercontent.com/naushilrana6/portfolio-images/d5b7b272bf87aceb10d94356e008a0d4474d735d/profile.jpeg" alt="Naushil Rana">
+            <!-- Profile Image -->
+            <div class="hero-image" onclick="openModal('profile.jpg')">
+                <img src="profile.jpg" alt="Jay Shah" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800'">
             </div>
         </div>
     </section>
 
-    <!-- PORTFOLIO CATEGORIES -->
+    <!-- WORK SECTION (ONLY GRAPHIC DESIGN) -->
     <section id="portfolio">
-        <h2 class="section-title">My <span>Work Categories</span></h2>
+        <h2 class="section-title">My <span>Work</span></h2>
         
-        <div class="portfolio-grid">
-            <!-- Graphic Design Page Link -->
+        <div class="single-card-wrapper">
             <a href="graphic.html" class="card-link">
                 <div class="project-card">
                     <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop" alt="Graphic Design">
                     <div class="project-info">
-                        <h3>🎨 Graphic Design</h3>
-                        <p>Posters, social media banners, brochures, and brand identity designs.</p>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Video Editing -->
-            <a href="#" class="card-link">
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800" alt="Video Editing">
-                    <div class="project-info">
-                        <h3>🎬 Video Editing</h3>
-                        <p>High-retention Reels, Shorts, and seamless motion graphics transitions.</p>
-                    </div>
-                </div>
-            </a>
-
-            <!-- AI Art -->
-            <a href="#" class="card-link">
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800" alt="AI Art">
-                    <div class="project-info">
-                        <h3>🤖 AI Art & Prompts</h3>
-                        <p>Advanced Midjourney prompts, generative visual concepts, and AI art.</p>
+                        <h3>🎨 Graphic Design Portfolio</h3>
+                        <p>Click here to explore my collection of posters, branding, social media graphics, and creative art.</p>
                     </div>
                 </div>
             </a>
@@ -231,11 +197,11 @@
                     <p>Have a project in mind? Feel free to reach out and let's create something extraordinary.</p>
                 </div>
                 <div class="contact-cards-wrapper">
-                    <a href="mailto:naushil@example.com" class="contact-glass-card">
+                    <a href="mailto:jayshah@example.com" class="contact-glass-card">
                         <div class="contact-icon">📧</div>
                         <div class="contact-details">
                             <h4>Email Me</h4>
-                            <p>contact@naushilrana.com</p>
+                            <p>contact@jayshah.com</p>
                         </div>
                     </a>
                     <a href="https://wa.me/" target="_blank" class="contact-glass-card">
@@ -276,19 +242,19 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>© 2026 Naushil Rana. All Rights Reserved.</p>
+        <p>© 2026 Jay Shah. All Rights Reserved.</p>
     </footer>
 
     <!-- JAVASCRIPT -->
     <script>
-        // Theme Switcher (Dark / Light)
+        // Theme Switcher
         const themeToggle = document.getElementById('themeToggle');
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('light-mode');
             themeToggle.textContent = document.body.classList.contains('light-mode') ? '🌙' : '☀️';
         });
 
-        // Image Modal Popup
+        // Image Modal
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImg');
 
